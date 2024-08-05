@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_UPPCL }}
-          projectId: test-uppcl
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UPPCL_BILLING_APP }}
+          projectId: uppcl-billing-app
