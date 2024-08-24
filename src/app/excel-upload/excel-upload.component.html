@@ -1,0 +1,37 @@
+<div class="p-20 m-t-50 excel-container">
+
+    <div class="custom-file-upload">
+        <div class="m-t-10">
+            <button type="button" class="m-t-10" (click)="fileInput.click()">Upload File</button>
+        </div>
+        <div class="m-t-10">
+            <input type="file" #fileInput (change)="onFileChange($event)" />
+        </div>
+    </div>
+  </div>
+  
+  <div *ngIf="excelData?.length" class="container m-t-10">
+    <div class="form-row">
+        <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search...">
+        
+    </div><button (click)="clear()" *ngIf="searchText">Clear Search</button>
+    <div class="table-container">
+        <table class="styled-table" *ngIf="filteredData().length; else noRecordErrorMessage">
+            <thead>
+              <tr>
+                <th *ngFor="let header of headers">{{ header }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredData()">
+                <td *ngFor="let cell of row">{{ cell }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <ng-template #noRecordErrorMessage>
+            <div class="alert alert-danger m-t-20">
+              <span class="p-5">No record found :)</span>
+            </div>
+          </ng-template>  
+    </div>  
+  </div>

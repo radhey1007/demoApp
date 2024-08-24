@@ -1,0 +1,96 @@
+input[type="file"] {
+    display: none; /* or visibility: hidden; */
+  }
+  
+  /* Style your custom button */
+  .custom-file-upload button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Add hover effect if you want */
+  .custom-file-upload button:hover {
+    background-color: #0056b3;
+  }
+ 
+
+
+  /* Make the table container responsive */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+  
+  /* Basic table styling */
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .styled-table thead tr {
+    background-color: #1976d2;
+    color: white;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1976d2;
+  }
+  
+  /* Responsive table for smaller screens */
+   @media screen and (max-width: 768px) {
+    .excel-container {
+     position: relative;
+     top:25px;
+    //  background-color: red
+    }
+  }
+    
+  .alert {
+    padding: 15px;
+    width: 80%;    
+    text-align: center;
+    color:#dddddd;
+    font-size: 28px;
+    font-family: 600;
+    &.alert-danger {
+        background: red;
+    }
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+  .form-row {
+    display: flex;
+    gap: 10px;
+   
+  }
+  .form-control {
+    height: 50px;
+    line-height: 1rem;
+    font-size: 24px;
+    padding:5px;
+    width:50%;
+  }
+}   

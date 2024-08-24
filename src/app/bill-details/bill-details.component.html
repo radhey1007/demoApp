@@ -1,0 +1,22 @@
+<div class="content" role="main">
+
+    <!-- Highlight Card -->
+    <div class="card highlight-card card-small">
+        <title>UP</title>
+      <span><h2>Get Details</h2></span>
+    </div>
+  
+    <div class="card form-card">
+    <form (ngSubmit)="fetchBill()" class="form-wrapper">
+      <div class="form-group">
+        <input type="text" class="form-control" id="accountNo" [(ngModel)]="accountNo" placeholder="Enter the Account No" name="accountNo" class="form-control">
+      </div>
+      <div class="card-container">
+        <button class="form-card-btn" type="submit" class="card card-small">    
+          <h3>Submit</h3>
+        </button>    
+      </div>
+    </form>
+    </div>
+  
+  </div>

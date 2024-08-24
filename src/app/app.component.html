@@ -7,36 +7,15 @@
   />
   <span>Welcome</span>
     <div class="spacer"></div>
-    <a aria-label="Angular on twitter" target="_blank" id="link" rel="noopener" href="#" >
-     ABOUT
-    </a>
-    &nbsp; &nbsp; &nbsp;
-    <br>
-    <a aria-label="Angular on YouTube" target="_blank" id="link" rel="noopener" href="#" >
-      LOGIN
-    </a>
+    <div class="nav-bar">
+      <a aria-label="Angular on twitter"  class="nav-item m-l-25" [routerLink]="['/excel-upload']" id="link" rel="noopener" href="#" >
+        Excel Upload
+       </a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a aria-label="Angular on twitter"  class="nav-item m-r-35" [routerLink]="['/bill-details']" id="link" rel="noopener" href="#" >
+        Bill Details
+       </a>
+    </div>
 </div>
 
-<div class="content" role="main">
-
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-      <title>UP</title>
-    <span><h2>Get Details</h2></span>
-  </div>
-
-  <div class="card form-card">
-  <form (ngSubmit)="fetchBill()" class="form-wrapper">
-    <div class="form-group">
-      <input type="text" class="form-control" id="accountNo" [(ngModel)]="accountNo" placeholder="Enter the Account No" name="accountNo" class="form-control">
-    </div>
-    <div class="card-container">
-      <button class="form-card-btn" type="submit" class="card card-small">    
-        <h3>Submit</h3>
-      </button>    
-    </div>
-  </form>
-  </div>
-
-</div>
 <router-outlet></router-outlet>
+
