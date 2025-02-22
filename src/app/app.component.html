@@ -14,8 +14,12 @@
        <a aria-label="Angular on twitter"  class="nav-item m-r-35" [routerLink]="['/bill-details']" id="link" rel="noopener" href="#" >
         Bill Details
        </a>
+       <a aria-label="Angular on twitter"  class="nav-item m-r-35" [routerLink]="['/bill-details']"
+       [queryParams]="{ actionType: 'receipt-details'}" 
+       id="link" rel="noopener" href="#" >
+        Receipt Details
+       </a>
     </div>
 </div>
-
 <router-outlet></router-outlet>
 

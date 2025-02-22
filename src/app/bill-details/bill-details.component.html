@@ -1,15 +1,18 @@
 <div class="content" role="main">
-
     <!-- Highlight Card -->
     <div class="card highlight-card card-small">
         <title>UP</title>
-      <span><h2>Get Details</h2></span>
+      <span class="center"><h2>Get {{pageType === 'receipt-details' ? 'Receipt' : 'Bill' }} Details</h2></span>
     </div>
   
     <div class="card form-card">
-    <form (ngSubmit)="fetchBill()" class="form-wrapper">
+    <form (ngSubmit)="submit()" class="form-wrapper">
       <div class="form-group">
-        <input type="text" class="form-control" id="accountNo" [(ngModel)]="accountNo" placeholder="Enter the Account No" name="accountNo" class="form-control">
+        <div class="container">
+          <input type="text" #accountInput class="form-control left-box" id="accountNo" [(ngModel)]="accountNo" placeholder="Enter the Account No" name="accountNo" class="form-control">
+          <span class="m-l-20 right-box" *ngIf="accountNo" (click)="clear()"><i class="fa fa-solid fa-circle-xmark"></i></span>
+        </div>
+        
       </div>
       <div class="card-container">
         <button class="form-card-btn" type="submit" class="card card-small">    
@@ -17,6 +20,5 @@
         </button>    
       </div>
     </form>
-    </div>
-  
+    </div>  
   </div>

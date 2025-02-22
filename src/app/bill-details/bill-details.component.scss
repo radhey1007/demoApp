@@ -1,0 +1,25 @@
+.clear-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .clear-icon:hover {
+    color: #000;
+  }
+
+  .container {
+    display: flex;
+    .left-box {
+      width:70%;
+    }
+    .right-box {
+      width:20%;
+      position: relative;
+      top: 10px;
+    }
+
+  }
