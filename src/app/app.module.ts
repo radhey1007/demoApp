@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ExcelUploadComponent } from './excel-upload/excel-upload.component';
 import { BillDetailsComponent } from './bill-details/bill-details.component';
+import { HighchartComponent } from './highchart/highchart.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { HttpClientModule } from '@angular/common/http';
+import { LatestFeaturesComponent } from './latest-features/latest-features.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExcelUploadComponent,
-    BillDetailsComponent
+    BillDetailsComponent,
+    HighchartComponent,
+    LatestFeaturesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HighchartsChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
